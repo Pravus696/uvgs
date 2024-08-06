@@ -33,3 +33,9 @@ function renderMessage() {
  fetch ('22ce0db615454079b7ab7a9a3d5d3c7c') 
     .then(response => response.json())
     .then(data => console.log(data));
+    then(data => {
+        console.log(data);
+        console.log(data.articles[0].title);
+    })
+    .catch(error => console.error(error));
+
