@@ -1,70 +1,21 @@
-const genre = document.getElementsByID('genre');
-const theme = document.getElementsByID('theme');
-const playerSupport = document.getElementsByID('playerSupport');
+const genre = document.getElementsByID('#genre');
+const theme = document.getElementsByID('#theme');
+const playerSupport = document.getElementsByID('#playerSupport');
 
-
-submitButton.addEventListener('click', function() {
-  console.log('Genre: ', genre.value);
-  console.log('Theme: ', theme.value);
-  console.log('Player Support: ', playerSupport.value);
-
-
-const gameSuggestion = {
-    genre: 'Action',
-    theme: 'Zombie',
-    playerSupport: 'Single Player'
-    };
-
-    localStorage.setItem('gameSuggestion', JSON.stringify(gameSuggestion));
-    renderMessage();
+// Looking for the submit button
+submitButton.addEventListener('click', function () {
+  console.log(`Genre: ${genre}`);
+  console.log(`Theme:  ${theme}`);
+  console.log(`Player Support: ${playerSupport}`);
+  event.preventDefault();
 });
 
-function renderMessage() {
-  const gameSuggestion = JSON.parse(localStorage.getItem('gameSuggestion'));
-
-  if (gameSuggestion === null) {
-    return;
-  }
-
-  genre.textContent = gameSuggestion.genre;
-  theme.textContent = gameSuggestion.theme;
-  playerSupport.textContent = gameSuggestion.playerSupport;
-}
-
- fetch ('22ce0db615454079b7ab7a9a3d5d3c7c') 
-    .then(response => response.json())
-    .then(data => console.log(data));
-    then(data => {
-        console.log(data);
-        console.log(data.articles[0].title);
-    })
-    .catch(error => console.error(error));
-
-
-submitButton.addEventListener('click', function() {
-  console.log('Genre: ', genre.value);
-  console.log('Theme: ', theme.value);
-  console.log('Player Support: ', playerSupport.value);
-
-
-const gameSuggestion = {
-    genre: 'Action',
-    theme: 'Zombie',
-    playerSupport: 'Single Player'
-    };
-
-    localStorage.setItem('gameSuggestion', JSON.stringify(gameSuggestion));
-    renderMessage();
-});
-
-function renderMessage() {
-  const gameSuggestion = JSON.parse(localStorage.getItem('gameSuggestion'));
-
-  if (gameSuggestion === null) {
-    return;
-  }
-
-  genre.textContent = gameSuggestion.genre;
-  theme.textContent = gameSuggestion.theme;
-  playerSupport.textContent = gameSuggestion.playerSupport;
-}
+// Fetch API
+fetch('https://api.rawg.io/api/games?key=22ce0db615454079b7ab7a9a3d5d3c7c&dates=2019-09-01,2019-09-30&platforms=18,1,7')
+  .then(response => response.json())
+  .then(data => console.log(data)); // data is the object that we get from the API
+then(data => {
+  const games = data.results;
+  console.log(games);
+})
+  .catch(error => console.log(error));
