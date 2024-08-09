@@ -6,9 +6,12 @@ const userInputField = document.getElementById("userInput");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  const userInput = userInputField.value;
+  localStorage.setItem('genre', genre.value);
+  localStorage.setItem('theme', theme.value);
+  readLocalStorage();
+}
+);
   // do something with the user input
-});
 
 // Looking for the submit button
 // submitButton.addEventListener('click', function () {
@@ -26,3 +29,10 @@ fetch('https://api.rawg.io/api/games?key=22ce0db615454079b7ab7a9a3d5d3c7c&dates=
     console.log(games);
   })
   .catch(error => console.log(error));
+
+const readLocalStorage = function () {
+  const genre = localStorage.getItem('genre');
+  const theme = localStorage.getItem('theme');
+  const playerSupport = localStorage.getItem('playerSupport');
+  console.log(genre, theme, playerSupport);
+}
