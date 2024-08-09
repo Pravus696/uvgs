@@ -1,0 +1,14 @@
+body {
+    background-color: #282c28;
+    color: #777D77;
+}
+
+#form,
+#carousel {
+    background-color: #9AA89C;
+    color: black;
+}
+
+#submit {
+    background-color: #00B006;
+}
