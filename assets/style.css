@@ -2,10 +2,14 @@ body {
     background-color: #252725;
     color: #777D77;
 }
+
+#main{
+    inline-size: flex;
+}
 #form {
-    padding: 20px;
-    margin: 0 auto;
-    width: 400px;
+    padding: 250px;
+    margin: 20px;
+    width: 200px;
     border: 1px solid #777D77;
     border-radius: 10px;
     background-color: #a9caae;
@@ -13,11 +17,14 @@ body {
 }
 #carousel {
     background-color: #a9caae;
-    padding: 20px;
-    margin: 0 auto;
-    width: 400px;
+    padding: 250px;
+    margin: 20px;
+    width: 300px;
     border: 1px solid #777D77;
     border-radius: 10px;
+    position: absolute;
+    top: 99px;
+    left: 710px;
 }
 
 #submit {
