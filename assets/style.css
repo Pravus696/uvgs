@@ -30,14 +30,6 @@ main {
 }
 
 #carousel {
-
-    background-color: var(--background-card);
-    padding: 435px;
-    margin: 0 auto;
-    width: 400px;
-    border: 1px solid var(--card-border);
-    border-radius: 10px;
-
   background-color: var(--background-card);
   padding: 20px;
   margin: 0 auto;
@@ -50,15 +42,6 @@ main {
 .carousel-inner {
     display: grid;
     place-items: center;
-}
-#carousel {
-  background-color: var(--background-card);
-  padding: 20px;
-  margin: 0 auto;
-  width: 400px;
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
-  display: inline-flex;
 }
 
 .carousel-inner {
