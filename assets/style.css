@@ -5,19 +5,6 @@
     --carousel-control-width: 15%;
     --carousel-control-opacity: .5;
     --carousel-control-hover-opacity: .9;
-<<<<<<< HEAD
-=======
-    --carousel-control-transition: opacity .15s ease;
-
-    --carousel-control-icon-width: 2rem;
-
-    --carousel-control-prev-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var(--carousel-control-color)'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
-    --carousel-control-next-icon-bg: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='var(--carousel-control-color)'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
-
-    /* $carousel-transition-duration:       .6s; */
-    /* $carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`) */
-
->>>>>>> d6c3e70523b7c70e773cd6dde009e797b575d985
     /* --carousel-control-transition: opacity .15s ease; */
     --carousel-control-icon-width:        2rem;
 /* $carousel-transition-duration:       .6s; */
@@ -35,8 +22,6 @@ main {
 }
 
 #form {
-    padding: 435px;
-    margin: 0 auto;
     width: 400px;
     border: 1px solid var(--card-border);
     border-radius: 10px;
@@ -66,7 +51,6 @@ main {
     display: grid;
     place-items: center;
 }
-<<<<<<< HEAD
 #carousel {
   background-color: var(--background-card);
   padding: 20px;
@@ -84,12 +68,6 @@ main {
 .carousel-item {
     align-items: center;
     position: absolute;
-=======
-.carousel-item {
-    align-items: center;
-    position: absolute;
-
->>>>>>> d6c3e70523b7c70e773cd6dde009e797b575d985
 }
 
 .carousel-control-next,
