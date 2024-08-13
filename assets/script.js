@@ -25,6 +25,12 @@ const key = "22ce0db615454079b7ab7a9a3d5d3c7c";
   console.log(`Genre: ${genre.value}`);
   console.log(`Platforms: ${platforms.value}`);
   console.log(`Player Support: ${playerSupport.value}`);
+  const theme = document.querySelector("#theme");
+  const playerSupport = document.querySelector("#support");
+  localStorage.setItem("genre", genre.value);
+  localStorage.setItem("theme", theme.value);
+  localStorage.setItem("playerSupport", playerSupport.value);
+  readLocalStorage();
 });
 // do something with the user input
 
@@ -40,6 +46,16 @@ const key = "22ce0db615454079b7ab7a9a3d5d3c7c";
 //const apikey = "https://api.rawg.io/api/games?key=22ce0db615454079b7ab7a9a3d5d3c7c"; 
 // const searchQuery = 'video games';
 // const apiURL = `${"https://api.rawg.io/api/platforms?key=22ce0db615454079b7ab7a9a3d5d3c7c"}&search=${searchQuery}@api_key=${"https://api.rawg.io/api/platforms?key=22ce0db615454079b7ab7a9a3d5d3c7c"}`;
+
+fetch(
+  "https://api.rawg.io/api/platforms?key=22ce0db615454079b7ab7a9a3d5d3c7c"
+)
+  .then((response) => response.json())
+  .then((data) => {
+    const games = data.results;
+    console.log(games);
+  })
+  .catch((error) => console.log(error));
 
 // const imageUrl = 'https://api.rawg.io/api/platforms?key=22ce0db615454079b7ab7a9a3d5d3c7c';
 // const gameImage = document.createElement("gameImage");

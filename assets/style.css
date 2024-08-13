@@ -14,6 +14,12 @@
 
     /* $carousel-transition-duration:       .6s; */
     /* $carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`) */
+
+    /* --carousel-control-transition: opacity .15s ease; */
+    --carousel-control-icon-width:        2rem;
+/* $carousel-transition-duration:       .6s; */
+/* $carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`) */
+
 }
 
 body {
@@ -36,19 +42,50 @@ main {
 }
 
 #carousel {
+
     background-color: var(--background-card);
     padding: 435px;
     margin: 0 auto;
     width: 400px;
     border: 1px solid var(--card-border);
     border-radius: 10px;
+
+  background-color: var(--background-card);
+  padding: 20px;
+  margin: 0 auto;
+  width: 400px;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  display: inline-flex;
+}
+
+.carousel-inner {
+    display: grid;
+    place-items: center;
+}
+.carousel-item {
+    align-items: center;
+    position: absolute;
+
 }
 
 .carousel-control-next,
 .carousel-control-prev {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    height: auto;
     width: var(--carousel-control-width);
     opacity: var(--carousel-control-opacity);
     transition: var(--carousel-control-transition);
+}
+
+.carousel-control-prev {
+    margin-right: auto; /* Adjust the margin as needed */
+}
+
+.carousel-control-next {
+    margin-left: auto; /* Adjust the margin as needed */
 }
 
 .carousel-control-next.hover,
@@ -56,14 +93,8 @@ main {
     opacity: var(--carousel-control-hover-opacity);
 }
 
-.carousel-control-next-icon {
-    width: var(--carousel-control-icon-width);
-    background-image: var(--carousel-control-next-icon-bg);
-}
-
-.carousel-control-prev-icon {
-    width: var(--carousel-control-icon-width);
-    background-image: var(--carousel-control-prev-icon-bg);
+.visually-hidden {
+    display: none;
 }
 
 #submit {
@@ -73,3 +104,15 @@ main {
 select {
     background-color: #e0f8e1;
 }
+
+
+@media screen and (max-width: 900px) {
+    /* Use flex-direction to stack the navbar, sidebar, and body */
+    main {
+      flex-direction: column;
+    }
+    /* Make the sidebar stack below the body */
+    aside {
+      order: 2;
+    }
+  }
