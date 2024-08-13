@@ -5,7 +5,7 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   const genre = document.querySelector("#genre");
   const theme = document.querySelector("#theme");
-  const playerSupport = document.querySelector("#playerSupport");
+  const playerSupport = document.querySelector("#support");
   localStorage.setItem("genre", genre.value);
   localStorage.setItem("theme", theme.value);
   localStorage.setItem("playerSupport", playerSupport.value);
@@ -23,7 +23,7 @@ form.addEventListener("submit", (e) => {
 
 // Fetch API
 fetch(
-  "https://api.rawg.io/api/games?key=22ce0db615454079b7ab7a9a3d5d3c7c&dates=2019-09-01,2019-09-30&platforms=18,1,7"
+  "https://api.rawg.io/api/platforms?key=22ce0db615454079b7ab7a9a3d5d3c7c"
 )
   .then((response) => response.json())
   .then((data) => {
