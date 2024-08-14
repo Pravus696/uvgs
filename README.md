@@ -28,6 +28,7 @@ It's done when the website stores the user input into local storage and displays
 It's done when the website compiles a list of games within the restrictions of the users input and provides a picture of the games.
 
 It's done when the app is successfully deployed to GitHub pages.
+(Live Link: https://pravus696.github.io/uvgs/)
 
 It's done when the app is designed using a CCS framework.
 
