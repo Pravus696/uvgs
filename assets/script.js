@@ -17,7 +17,7 @@ form.addEventListener("submit", (e) => {
   const key = "22ce0db615454079b7ab7a9a3d5d3c7c";
   // fetch request
   fetch(
-    `https://api.rawg.io/api/games?key=${key}&page_size=50&parent_platforms=${platform.value}&genres=${genre.value}&tags=${playerSupport.value}`
+    `https://api.rawg.io/api/games?key=${key}&parent_platforms=${platform.value}&genres=${genre.value}&tags=${playerSupport.value}`
   )
     .then((response) => response.json())
     .then((data) => {
