@@ -1,102 +1,102 @@
 :root {
-    --card-border: #777D77;
-    --background-card: #a9caae;
-    --carousel-control-color: white;
-    --carousel-control-width: 15%;
-    --carousel-control-opacity: .5;
-    --carousel-control-hover-opacity: .9;
-    /* --carousel-control-transition: opacity .15s ease; */
-    --carousel-control-icon-width:        2rem;
-/* $carousel-transition-duration:       .6s; */
-/* $carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`) */
-
+  --card-border: #777d77;
+  --background-card: #a9caae;
+  --carousel-control-color: white;
+  --carousel-control-width: 15%;
+  --carousel-control-opacity: 0.5;
+  --carousel-control-hover-opacity: 0.9;
+  --carousel-control-icon-width: 2rem;
 }
 
 body {
-    background-color: #252725;
-    color: var(--card-border);
-}
-
-main {
-    display: inline-flex;
+  background-color: #252725;
+  color: var(--card-border);
+  width: 100vw;
+  height: 100vh;
 }
 
 #form {
-    width: 400px;
-    border: 1px solid var(--card-border);
-    border-radius: 10px;
-    background-color: var(--background-card);
-    color: black;
+  padding: 100px;
+  width: 400px;
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  background-color: var(--background-card);
+  color: black;
 }
 
 #carousel {
   background-color: var(--background-card);
-  padding: 20px;
-  margin: 0 auto;
+  padding: 100px;
   width: 400px;
   border: 1px solid var(--card-border);
   border-radius: 10px;
-  display: inline-flex;
 }
 
 .carousel-inner {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
 
 .carousel-inner {
-    display: grid;
-    place-items: center;
+  display: grid;
+  place-items: center;
 }
-.carousel-item {
-    align-items: center;
-    position: absolute;
+.carousel-inner div {
+  align-items: center;
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-inner div img {
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-control-next,
 .carousel-control-prev {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* Align items vertically in the center */
-    height: auto;
-    width: var(--carousel-control-width);
-    opacity: var(--carousel-control-opacity);
-    transition: var(--carousel-control-transition);
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items vertically in the center */
+  height: auto;
+  width: var(--carousel-control-width);
+  opacity: var(--carousel-control-opacity);
+  transition: var(--carousel-control-transition);
 }
 
 .carousel-control-prev {
-    margin-right: auto; /* Adjust the margin as needed */
+  margin-right: auto; /* Adjust the margin as needed */
 }
 
 .carousel-control-next {
-    margin-left: auto; /* Adjust the margin as needed */
+  margin-left: auto; /* Adjust the margin as needed */
 }
 
 .carousel-control-next.hover,
 .carousel-control-prev.hover {
-    opacity: var(--carousel-control-hover-opacity);
+  opacity: var(--carousel-control-hover-opacity);
 }
 
 .visually-hidden {
-    display: none;
+  display: none;
 }
 
 #submit {
-    background-color: #00b006;
+  background-color: #00b006;
 }
 
 select {
-    background-color: #e0f8e1;
+  background-color: #e0f8e1;
 }
 
-
 @media screen and (max-width: 900px) {
-    /* Use flex-direction to stack the navbar, sidebar, and body */
-    main {
-      flex-direction: column;
-    }
-    /* Make the sidebar stack below the body */
-    aside {
-      order: 2;
-    }
+  /* Use flex-direction to stack the navbar, sidebar, and body */
+  main {
+    flex-direction: column;
   }
+  /* Make the sidebar stack below the body */
+  aside {
+    order: 2;
+  }
+}
