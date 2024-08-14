@@ -18,7 +18,7 @@ Gives you video games that will suit your playstyle.
 Usage
 Use this app to get the right  video game that fits your playstyle.
 
-Credits
+# Credits
 Collaborators include the following:
 
 Trevor Bell https://github.com/Pravus696
