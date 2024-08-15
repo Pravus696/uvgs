@@ -4,6 +4,9 @@
 UVGS is a web application designed to help gamers find a video game that matches their preferences. Users can input their playstyle which will then be given a suggestion of multiple games that matches their search creterias. They can also cycle through the suggestions if they don't like the first one that was suggested.
 
 
+![image](https://github.com/user-attachments/assets/162fb23b-6c6a-411c-823f-fc851b3cbc7a)
+
+![image](https://github.com/user-attachments/assets/96a07936-7a4c-4fbd-a97a-02e565cfa4c5)
 
 
 # Usage
