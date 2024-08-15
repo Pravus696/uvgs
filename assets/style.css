@@ -17,7 +17,14 @@ body {
 
 main {
     display:flex;
-    
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
 }
 
 #form {
@@ -61,7 +68,6 @@ main {
 
 .carousel-control-next,
 .carousel-control-prev {
-  display: flex;
   justify-content: space-between;
   align-items: center; /* Align items vertically in the center */
   height: auto;
