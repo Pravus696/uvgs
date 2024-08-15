@@ -82,3 +82,33 @@ prevBtn.addEventListener("click", () => {
     (currentIndex - 1 + carouselItems.length) % carouselItems.length;
   carouselItems[currentIndex].style.display = "block";
 });
+
+
+// light/dark mode
+// Access needed information from document
+const themeSwitcher = document.querySelector("#toggle");
+const container = document.querySelector("body");
+
+// Set default mode to light with sun emoji
+let toggle = localStorage.getItem("toggle") || "light"; // Retrieve toggle state from localStorage or default to 'light'
+themeSwitcher.textContent = toggle === "dark" ? "🌜" : "🌞"; // Set the toggle button text based on the toggle state
+
+// Listen for a click event on toggle switch
+themeSwitcher.addEventListener("click", function () {
+  // Toggle the theme
+  toggle = toggle === "light" ? "dark" : "light";
+
+  // Update the theme based on the toggle state
+  if (toggle === "dark") {
+    container.setAttribute("class", "dark");
+    themeSwitcher.textContent = "🌜";
+    document.documentElement.style.setProperty("--circle-color", "#486581");
+  } else {
+    container.setAttribute("class", "light");
+    themeSwitcher.textContent = "🌞";
+    document.documentElement.style.setProperty("--circle-color", "#ffb100");
+  }
+
+  // Save the toggle state to localStorage
+  localStorage.setItem("toggle", toggle);
+});
