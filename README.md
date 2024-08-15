@@ -39,3 +39,9 @@ Collaborators include the following:
 Trevor Bell https://github.com/Pravus696
 
 Christian Guzman https://github.com/Chris-005
+
+# Technology Used
+HTML, CSS, Javascript
+
+# License
+Copyright (c) 2024 All Rights Reserved
