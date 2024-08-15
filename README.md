@@ -15,7 +15,7 @@ What problem does it solve?
 
 Gives you video games that will suit your playstyle.
 
-Usage
+#Usage
 Use this app to get the right  video game that fits your playstyle.
 
 # Acceptance Criteria
