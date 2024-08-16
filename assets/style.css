@@ -45,7 +45,7 @@ footer {
 #carousel {
   background-color: var(--background-card);
   height: 100px;
-  padding: 100px;
+ /* padding: 100px; */
   width: 400px;
   /* border: 1px solid var(--light); */
   /* border-radius: 10px; */
