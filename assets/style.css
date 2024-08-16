@@ -1,16 +1,21 @@
 :root {
-  --card-border: #777d77;
   --background-card: #a9caae;
   --carousel-control-color: white;
   --carousel-control-width: 15%;
   --carousel-control-opacity: 0.5;
   --carousel-control-hover-opacity: 0.9;
   --carousel-control-icon-width: 2rem;
+  --light: #777d77;
+  --light-accent: #f9f9fb;
+  --light-body: #f9f9fb;
+  --dark: #000;
+  --dark-accent: #a9caae;
+  --dark-body: #252725;
 }
 
 body {
-  background-color: #252725;
-  color: var(--card-border);
+  /* background-color: var(--background-color);
+  color: var(--light); */
   width: 100vw;
   height: 100vh;
 }
@@ -31,8 +36,8 @@ footer {
   padding: 100px;
   height: 100px;
   width: 400px;
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
+  /* border: 1px solid var(--light); */
+  /* border-radius: 10px; */
   background-color: var(--background-card);
   color: black;
 }
@@ -40,9 +45,10 @@ footer {
 #carousel {
   background-color: var(--background-card);
   height: 100px;
+  padding: 100px;
   width: 400px;
-  border: 1px solid var(--card-border);
-  border-radius: 10px;
+  /* border: 1px solid var(--light); */
+  /* border-radius: 10px; */
 }
 
 .carousel-inner {
@@ -118,6 +124,33 @@ select {
     width: 200px;
     order: 2;
   }
+}
+
+/*
+  Classes
+*/
+.dark header,
+.dark footer {
+  background-color: var(--dark);
+  color: var(--light);
+}
+
+.dark {
+  background-color: var(--dark-body);
+  color: var(--light);
+}
+
+
+
+.light header,
+.light footer {
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.light {
+  background-color: var(--light-body);
+  color: var(--dark);
 }
 
 

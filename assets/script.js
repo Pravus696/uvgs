@@ -90,8 +90,8 @@ const themeSwitcher = document.querySelector("#toggle");
 const container = document.querySelector("body");
 
 // Set default mode to light with sun emoji
-let toggle = localStorage.getItem("toggle") || "light"; // Retrieve toggle state from localStorage or default to 'light'
-themeSwitcher.textContent = toggle === "dark" ? "🌜" : "🌞"; // Set the toggle button text based on the toggle state
+let toggle = localStorage.getItem("toggle") || "dark"; // Retrieve toggle state from localStorage or default to 'light'
+themeSwitcher.textContent = toggle === "light" ? "🌜" : "🌞"; // Set the toggle button text based on the toggle state
 
 // Listen for a click event on toggle switch
 themeSwitcher.addEventListener("click", function () {
@@ -100,13 +100,13 @@ themeSwitcher.addEventListener("click", function () {
 
   // Update the theme based on the toggle state
   if (toggle === "dark") {
-    container.setAttribute("class", "dark");
-    themeSwitcher.textContent = "🌜";
-    document.documentElement.style.setProperty("--circle-color", "#486581");
-  } else {
     container.setAttribute("class", "light");
     themeSwitcher.textContent = "🌞";
-    document.documentElement.style.setProperty("--circle-color", "#ffb100");
+    // document.documentElement.style.setProperty("--background-color", "#f9f9fb");
+  } else {
+    container.setAttribute("class", "dark");
+    themeSwitcher.textContent = "🌜";
+    // document.documentElement.style.setProperty("--background color", "#ffb100");
   }
 
   // Save the toggle state to localStorage
